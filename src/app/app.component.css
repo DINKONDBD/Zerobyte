@@ -1,0 +1,44 @@
+body {
+  background-color: #212426;
+  font-family: "Ubuntu Mono";
+  color: #E8F4E3;
+}
+
+textarea {
+  resize: none;
+  border-radius: 2px;
+  transition: 2s;
+  border-width: 0px;
+}
+
+textarea:hover {
+  border-color: #7AB7A8;
+}
+
+.divMsg {
+  background: #3A3345;
+  border: #E8F4E3;
+  font-family: "Ubuntu Mono";
+  color: #E8F4E3;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.divsend {
+  color: #3A3345;
+  border: #D49B6A;
+  font-family: "Ubuntu Mono";
+  color: #E8F4E3;
+  text-align: center;
+  border-radius: 90px;
+  left: 50%;
+}
+
+button {
+  width: 170px;
+  height: 33px;
+  border-radius: 90px;
+  border-color: white;
+}
+
+/*# sourceMappingURL=app.component.css.map */
