@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {AppService} from "./app.service";
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -19,7 +20,8 @@ import {MatInputModule} from '@angular/material/input';
     AppRoutingModule,
     HttpClientModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    BrowserAnimationsModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

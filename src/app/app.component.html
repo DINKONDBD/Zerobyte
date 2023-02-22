@@ -12,19 +12,28 @@
 
   <div class="divsend">
     <h2>Send post</h2>
+    <form>
+      <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+        <input #a matInput placeholder="name" value="">
 
-    <textarea #a placeholder="name"></textarea>
-    <div>
-      <textarea #b placeholder="post content"></textarea>
-    </div>
-    <button (click)="send(a.value, b.value)" mat-flat-button color="warn">Send</button>
+      </mat-form-field>
+      <div>
+        <mat-form-field class="example-full-width">
+          <mat-label>Content</mat-label>
+          <input #b matInput placeholder="Content" value="">
+
+        </mat-form-field>
+      </div>
+
+    </form>
+<!--    <textarea #a placeholder="name"></textarea>-->
+<!--    <div>-->
+<!--      <textarea #b placeholder="post content"></textarea>-->
+<!--    </div>-->
+    <button (click)="send(a.value, b.value)" mat-flat-button color="accent">Send</button>
   </div>
-  <form class="example-form">
-    <mat-form-field class="example-full-width">
-      <mat-label>Favorite food</mat-label>
-      <input matInput placeholder="Ex. Pizza" value="Sushi">
-    </mat-form-field>
-  </form>
+
 
   <div *ngFor="let item of (items$ | async)" class="divMsg">
     <h2>{{item.name}}</h2>

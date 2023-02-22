@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -96,6 +97,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -118,5 +120,13 @@
     "schematicCollections": [
       "@angular-eslint/schematics"
     ]
+  },
+  "schematics": {
+    "@angular-eslint/schematics:application": {
+      "setParserOptionsProject": true
+    },
+    "@angular-eslint/schematics:library": {
+      "setParserOptionsProject": true
+    }
   }
 }

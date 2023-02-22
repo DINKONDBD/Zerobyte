@@ -1,48 +1,69 @@
-//$base-color-red: #DC4752;
-//$base-color-white: #E8F4E3;
-//$base-color-aqua: #7AB7A8;
-//$base-color-orange: #D49B6A;
-//$base-color-dark: #3A3345;
-//
-//body {
-//  background-color:#212426;
-//  font-family: "Ubuntu Mono";
-//  color:$base-color-white;
-//}
-//textarea
-//{
-//  resize:none;
-//  border-radius: 2px;
-//  transition: 2s;
-//  border-width: 0px;
-//  width: 170px;
-//  height: 33px;
-//}
-//textarea:hover {
-//  border-color:$base-color-aqua;
-//}
-//.divMsg
-//{
-//  background: $base-color-dark;
-//  border:$base-color-white;
-//  font-family: "Ubuntu Mono";
-//  color:$base-color-white;
-//  text-align: center;
-//  border-radius: 3px;
-//
-//}
-//.divsend{
-//  color:$base-color-dark;
-//  border:$base-color-orange;
-//  font-family: "Ubuntu Mono";
-//  color:$base-color-white;
-//  text-align: center;
-//  border-radius: 90px;
-//  left:50%;
-//}
-//button{
-//  width: 170px;
-//  height: 33px;
-//  border-radius: 90px;
-//  border-color:white;
-//}
+$base-color-red: #DC4752;
+$base-color-white: #E8F4E3;
+$base-color-aqua: #7AB7A8;
+$base-color-orange: #D49B6A;
+$base-color-dark: #3A3345;
+
+body {
+  background-color:#303030;
+  font-family: "Ubuntu Mono";
+  background-image: url("pexels-roberto-nickson-2478248.jpg");
+  color:$base-color-white;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+
+
+}
+textarea
+{
+  resize:none;
+  border-radius: 2px;
+  transition: 2s;
+  border-width: 0px;
+  width: 170px;
+  height: 33px;
+}
+textarea:hover {
+  border-color:$base-color-aqua;
+}
+.divMsg
+{
+  background: #232323;
+  border:$base-color-white;
+  font-family: "Ubuntu Mono";
+  color:white;
+  text-align: center;
+  border-radius: 20px;
+  text-shadow: #E91E63 0px 0px 20px;
+  transition-duration:1s;
+  box-shadow: #3A3345 2px 2px 2px;
+  opacity:80%;
+
+}
+.divMsg:hover
+{
+  text-shadow: #ff7dab 2px 2px 20px;
+  animation-name:example;
+  animation-duration: 1s;
+}
+
+@keyframes example {
+  0%   {text-shadow: #E91E63 0px 0px 20px;}
+  25%  {text-shadow: #ff5c93 0px 0px 20px;}
+  50%  {text-shadow: #ff7ca7 0px 0px 20px;}
+  100% {text-shadow: #ffacca 0px 0px 20px;}
+}
+.divsend{
+  color:$base-color-dark;
+  border:$base-color-orange;
+  font-family: "Ubuntu Mono";
+  color:$base-color-white;
+  text-align: center;
+  border-radius: 90px;
+  left:50%;
+}
+button{
+  width: 210px;
+  height: 210px;
+}
