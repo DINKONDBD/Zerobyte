@@ -17,10 +17,8 @@ import {MatInputModule} from '@angular/material/input';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
-    ,
-    MatButtonModule
-    ,
+    HttpClientModule,
+    MatButtonModule,
     MatInputModule
   ],
   providers: [AppService],
