@@ -24,38 +24,16 @@ textarea:hover {
 }
 
 .divMsg {
-  background: #232323;
+  background: #3d3d3d;
   border: #E8F4E3;
   font-family: "Ubuntu Mono";
   color: white;
   text-align: center;
   border-radius: 20px;
-  text-shadow: #E91E63 0px 0px 20px;
   transition-duration: 1s;
-  box-shadow: #3A3345 2px 2px 2px;
-  opacity: 80%;
+  opacity: 95%;
 }
 
-.divMsg:hover {
-  text-shadow: #ff7dab 2px 2px 20px;
-  animation-name: example;
-  animation-duration: 1s;
-}
-
-@keyframes example {
-  0% {
-    text-shadow: #E91E63 0px 0px 20px;
-  }
-  25% {
-    text-shadow: #ff5c93 0px 0px 20px;
-  }
-  50% {
-    text-shadow: #ff7ca7 0px 0px 20px;
-  }
-  100% {
-    text-shadow: #ffacca 0px 0px 20px;
-  }
-}
 .divsend {
   color: #3A3345;
   border: #D49B6A;

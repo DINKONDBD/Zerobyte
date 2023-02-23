@@ -15,26 +15,20 @@
     <form>
       <mat-form-field class="example-full-width">
         <mat-label>Name</mat-label>
-        <input #a matInput placeholder="name" value="">
-
+        <input maxlength="20" #a matInput placeholder="name" value="">
+        <mat-hint align="end">{{a.value.length}} / 20</mat-hint>
       </mat-form-field>
       <div>
         <mat-form-field class="example-full-width">
           <mat-label>Content</mat-label>
-          <input #b matInput placeholder="Content" value="">
-
+          <input maxlength="260" #b matInput placeholder="Content" value="">
+          <mat-hint align="end">{{b.value.length}} / 260</mat-hint>
         </mat-form-field>
       </div>
 
     </form>
-<!--    <textarea #a placeholder="name"></textarea>-->
-<!--    <div>-->
-<!--      <textarea #b placeholder="post content"></textarea>-->
-<!--    </div>-->
-    <button (click)="send(a.value, b.value)" mat-flat-button color="accent">Send</button>
+    <button (click)="send(a.value, b.value) ;" mat-flat-button color="accent">Send</button>
   </div>
-
-
   <div *ngFor="let item of (items$ | async)" class="divMsg">
     <h2>{{item.name}}</h2>
     <h4>{{item.address}}</h4>

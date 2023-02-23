@@ -1,6 +1,7 @@
 import {Component, OnChanges, OnInit, SimpleChanges, ViewEncapsulation} from '@angular/core';
 import {AppService} from "./app.service";
 import {Observable} from "rxjs";
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,11 @@ import {Observable} from "rxjs";
 export class AppComponent implements OnInit {
   items$: Observable<any[]> = this.appService.items$;
 
-  constructor(private appService: AppService) {
+  constructor(private appService: AppService, private _snackBar: MatSnackBar) {
+  }
+
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action);
   }
 
   title = 'Zerobyte';
@@ -28,7 +33,17 @@ export class AppComponent implements OnInit {
 
 
   public send(user: any, description: any) {
-    this.appService.send(user, description);
-    this.appService.loadItems();
+
+    if(user.length < 5||description.length < 8 )
+    {
+      this.openSnackBar("Error was occured", "Hide");
+    }
+    else
+    {
+      this.openSnackBar("Succesfully sent!", "Hide");
+      this.appService.send(user, description);
+      this.appService.loadItems();
+    }
+
   }
 }
