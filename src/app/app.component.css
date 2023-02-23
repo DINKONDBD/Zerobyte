@@ -1,7 +1,7 @@
 body {
   background-color: #303030;
   font-family: "Ubuntu Mono";
-  background-image: url("pexels-roberto-nickson-2478248.jpg");
+  background-image: url("pexels-pixabay-316093.jpg");
   color: #E8F4E3;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -24,6 +24,7 @@ textarea:hover {
 }
 
 .divMsg {
+  margin-top: 30px;
   background: #3d3d3d;
   border: #E8F4E3;
   font-family: "Ubuntu Mono";
