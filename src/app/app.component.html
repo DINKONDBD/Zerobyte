@@ -15,13 +15,13 @@
     <form>
       <mat-form-field class="example-full-width">
         <mat-label>Name</mat-label>
-        <input maxlength="20" #a matInput placeholder="name" value="">
-        <mat-hint align="end">{{a.value.length}} / 20</mat-hint>
+        <input maxlength="32" #a matInput value="">
+        <mat-hint align="end">{{a.value.length}} / 32</mat-hint>
       </mat-form-field>
       <div>
         <mat-form-field class="example-full-width">
           <mat-label>Content</mat-label>
-          <input maxlength="260" #b matInput placeholder="Content" value="">
+          <input maxlength="260" #b matInput value="">
           <mat-hint align="end">{{b.value.length}} / 260</mat-hint>
         </mat-form-field>
       </div>

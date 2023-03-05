@@ -1,47 +1,50 @@
 const express = require('express')
 const cors = require('cors')
+const mClient = require('mongodb').MongoClient;
+
+//for mongodb
+
+const URL = "mongodb://localhost:27017/";
+const DB = "Zerobyte";
+const COL = "requests";
+
+// creating variable for express server
+
 const app = express()
-var MongoClient = require('mongodb').MongoClient;
-const crypto = require("crypto");
 
-const secret = "This is a company secret 🤫";
+//etc
+const PORT = 80;
 
-// create a sha-256 hasher
-const sha256Hasher = crypto.createHmac("sha256", secret);
-
-var url = "mongodb://localhost:27017/";
-
-var db = "Zerobyte";
-var col = "requests";
-
-app.get('/get', cors(), function (req, res, next) {
+//getting information from server
+app.get('/get', cors(), (req, res) => {
   res.header("Content-Type",'application/json');
 
-  MongoClient.connect(url, function(err, db) {
+  mClient.connect(URL, (err, db) => {
     if (err) throw err;
-    var dbo = db.db("Zerobyte");
-    dbo.collection("requests").find({}).toArray(function(err, result) {
+    const dbo = db.db(DB);
+    dbo.collection(COL).find({}).toArray((err, result) => {
       if (err) throw err;
       res.json(result)
       db.close();
     });
   });
+
 })
 
-app.get('/send/:user/:description', function (req, res, next) {
-  MongoClient.connect(url, function(err, db) {
+//Sending information to server
+app.get('/send/:user/:description', (req) => {
+  mClient.connect(URL, (err, db) => {
     if (err) throw err;
     var dbo = db.db("Zerobyte");
-    const ipAddress = req.socket.remoteAddress;
-    var myobj = { name: req.params.user, address: req.params.description, ipAddr: ipAddress };
-    dbo.collection("requests").insertOne(myobj, function(err, res) {
+    let sendOBJ = { name: req.params.user, address: req.params.description};
+
+    dbo.collection(COL).insertOne(sendOBJ, (err, res) => {
       if (err) throw err;
-      console.log("1 document inserted");
       db.close();
     });
   });
-})
 
-app.listen(80, function () {
-  console.log('CORS-enabled web server listening on port 80')
-})
+
+});
+
+app.listen(PORT)
