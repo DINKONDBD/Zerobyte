@@ -1,10 +1,10 @@
 const express = require('express')
 const cors = require('cors')
-const mClient = require('mongodb').MongoClient;
+const mClient = require('mongodb-legacy').MongoClient;
 
 //for mongodb
 
-const URL = "mongodb://localhost:27017/";
+const URL = "mongodb://0.0.0.0:27017/";
 const DB = "Zerobyte";
 const COL = "requests";
 
